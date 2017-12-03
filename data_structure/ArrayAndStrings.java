@@ -122,6 +122,21 @@ class ArrayAndStrings{
         System.out.println("");
     }
 
+    public static boolean isSubString(String s, String sub){
+        return(s.contains(sub));
+
+    }
+
+    public static boolean isRotate(String s1, String s2){
+        // check if s2 is rotation of s1 by calling isSubstring only once
+        if(s1.length() == s2.length() && s1.length()> 0){
+            String s1s1 = s1 + s1;
+            return isSubString(s1s1,s2);
+        }else{
+            return false;
+        }
+    }
+
     public static void main(String[] args){
         
         //System.out.println(isCharUniqueUsingList("qwertyuiopasdftghjklzxcvbnm"));
@@ -130,6 +145,7 @@ class ArrayAndStrings{
         //System.out.println("hello".toCharArray());
         //System.out.println(replaceSpace("Mr John Smith      ".toCharArray(), 13));
         //System.out.println(compress("aabbccddeeaaa"));
+        /*
         int[][] matrix = new int[5][5];
         for(int i = 0 ; i < matrix.length ; i++){
             for(int j = 0 ; j < matrix.length ; j++){
@@ -138,6 +154,16 @@ class ArrayAndStrings{
         }
         printMatrix(matrix);
         printMatrix(rotateMatrix(matrix));
+        
+        String s = "hello";
+        String sub = "ell";
+        System.out.println(s.indexOf('a'));
+        System.out.println(s.contains('e'));
+
+        */
+        System.out.println(isRotate("waterbottle","erbottlewat"));
+        System.out.println(isRotate("waterbottle","ewaterbottl"));
+
     }
 
 }
