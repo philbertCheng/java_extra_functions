@@ -1,1 +1,1 @@
-Some java functions may be used commonly when programming in java  
+Some java functions/algorithms that may be used commonly when programming in java  
